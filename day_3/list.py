@@ -176,3 +176,8 @@ new_stack=['Python','SQL']
 full_stack = full_stack + new_stack
 print(full_stack)
 
+# ======================
+# Exercises level 2
+# ======================
+
+ages = [19,22,19,24,20,25,26,24,25,24]
