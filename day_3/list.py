@@ -1,3 +1,4 @@
+import math
 # Module 5: lists
 
 # ======================
@@ -181,3 +182,20 @@ print(full_stack)
 # ======================
 
 ages = [19,22,19,24,20,25,26,24,25,24]
+
+# Sorting the list and finding the max and min values
+ages.sort()
+
+min = ages[0]
+max = ages[-1]
+
+print(f'max value is {max} \n min value is {min}')
+
+# adding the min max values to the list 
+ages.append(max)
+ages.append(min)
+print(ages)
+
+# find the median item
+ages.sort()
+
