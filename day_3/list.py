@@ -191,11 +191,31 @@ max = ages[-1]
 
 print(f'max value is {max} \n min value is {min}')
 
-# adding the min max values to the list 
+#=====================================
+# adding the min max values to the list
+#==================================== 
 ages.append(max)
 ages.append(min)
 print(ages)
 
+#=========================
 # find the median item
+#===========================
 ages.sort()
+median = (ages[5] + ages[6])/2
+print(f'the median is {median}')
 
+#==========================
+# finding the average
+#==========================
+sum = 0
+for age in ages:
+    sum = age + sum
+average_age = sum/len(ages)
+print(f'the average is {average_age}')
+
+# ===================
+# range of ages
+#==================
+range_age = max-min
+print(f'range of age is {range_age}')
