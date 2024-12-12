@@ -101,3 +101,78 @@ print(f'list joined ot a string\n {it_companies}')
 # # ======================
 is_present= "Oracle" in it_companies
 print(is_present)
+
+# ======================
+# 16 sorting the list
+# ======================
+it_companies.sort()
+print(f'sorted list of companies is \n {it_companies}')
+
+# ======================
+# 17 rversing the order of the list
+# ======================
+it_companies.reverse()
+print(f'the reversed list \n {it_companies}')
+
+# ======================
+# 18 slicing out the first three items in list
+# ======================
+first_3=it_companies[:3]
+print(f'list of first 3 items\n {first_3}')
+
+# ======================
+# 19 slicing out the last three items in list
+# ======================
+last_3 = it_companies[-3:]
+print(f'last three items\n {last_3}')
+
+# ======================
+# 20 slicing out the middle items in list
+# ======================
+mid_items = it_companies[4:6]
+print(f'mid items\n {mid_items}')
+
+# ======================
+# 21 removing first item from the list
+# ======================
+del it_companies[0]
+print(f'frist item removed \n {it_companies}')
+
+# ======================
+# 22 removing mid_items from the list
+# ======================
+del it_companies[4]
+print(f'mid items removed \n {it_companies}')
+
+# ======================
+# 23 removing last item from the list
+# ======================
+del it_companies[-1]
+print(f'frist item removed \n {it_companies}')
+
+# ======================
+# 24 removing all item from the list
+# ======================
+it_companies.clear()
+print(f'all items removed\n {it_companies}')
+
+# ======================
+# 25 destruction of the list
+# ======================
+del it_companies
+print(f'list destroyed \n ')
+
+# ======================
+# 26 joinin two lists
+# ======================
+front_end = ['HTML','CSS','JS','React','REdux']
+back_end = ['Node','Express','MOngoDB']
+full_stack = front_end+back_end
+
+# ======================
+# 27 joinin two lists
+# ======================
+new_stack=['Python','SQL']
+full_stack = full_stack + new_stack
+print(full_stack)
+
