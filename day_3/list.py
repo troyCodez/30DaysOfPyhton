@@ -186,16 +186,17 @@ ages = [19,22,19,24,20,25,26,24,25,24]
 # Sorting the list and finding the max and min values
 ages.sort()
 
-min = ages[0]
-max = ages[-1]
+# minimun = ages[0]
+minimum = min(ages)
+maximum = max(ages)
 
-print(f'max value is {max} \n min value is {min}')
+print(f'max value is {maximum} \n min value is {minimum}')
 
 #=====================================
 # adding the min max values to the list
 #==================================== 
-ages.append(max)
-ages.append(min)
+ages.append(maximum)
+ages.append(minimum)
 print(ages)
 
 #=========================
@@ -208,14 +209,239 @@ print(f'the median is {median}')
 #==========================
 # finding the average
 #==========================
-sum = 0
+total = 0
 for age in ages:
-    sum = age + sum
-average_age = sum/len(ages)
+    total = age + total
+average_age = total/len(ages)
 print(f'the average is {average_age}')
 
 # ===================
 # range of ages
 #==================
-range_age = max-min
+range_age = maximum-minimum
 print(f'range of age is {range_age}')
+
+# comparing value of min-average and max-average
+# ==============================================
+value1 = minimum - average_age
+value2 = maximum - average_age
+
+value1 = abs(value1)
+value2 = abs(value2)
+value_compare = value1 == value2
+print(f'are they equal {value_compare}')
+
+# ============================
+# 1 Finding the middle countries
+# ==============================
+
+countries = [
+  'Afghanistan',
+  'Albania',
+  'Algeria',
+  'Andorra',
+  'Angola',
+  'Antigua and Barbuda',
+  'Argentina',
+  'Armenia',
+  'Australia',
+  'Austria',
+  'Azerbaijan',
+  'Bahamas',
+  'Bahrain',
+  'Bangladesh',
+  'Barbados',
+  'Belarus',
+  'Belgium',
+  'Belize',
+  'Benin',
+  'Bhutan',
+  'Bolivia',
+  'Bosnia and Herzegovina',
+  'Botswana',
+  'Brazil',
+  'Brunei',
+  'Bulgaria',
+  'Burkina Faso',
+  'Burundi',
+  'Cambodia',
+  'Cameroon',
+  'Canada',
+  'Cape Verde',
+  'Central African Republic',
+  'Chad',
+  'Chile',
+  'China',
+  'Colombi',
+  'Comoros',
+  'Congo (Brazzaville)',
+  'Congo',
+  'Costa Rica',
+  "Cote d'Ivoire",
+  'Croatia',
+  'Cuba',
+  'Cyprus',
+  'Czech Republic',
+  'Denmark',
+  'Djibouti',
+  'Dominica',
+  'Dominican Republic',
+  'East Timor (Timor Timur)',
+  'Ecuador',
+  'Egypt',
+  'El Salvador',
+  'Equatorial Guinea',
+  'Eritrea',
+  'Estonia',
+  'Ethiopia',
+  'Fiji',
+  'Finland',
+  'France',
+  'Gabon',
+  'Gambia, The',
+  'Georgia',
+  'Germany',
+  'Ghana',
+  'Greece',
+  'Grenada',
+  'Guatemala',
+  'Guinea',
+  'Guinea-Bissau',
+  'Guyana',
+  'Haiti',
+  'Honduras',
+  'Hungary',
+  'Iceland',
+  'India',
+  'Indonesia',
+  'Iran',
+  'Iraq',
+  'Ireland',
+  'Israel',
+  'Italy',
+  'Jamaica',
+  'Japan',
+  'Jordan',
+  'Kazakhstan',
+  'Kenya',
+  'Kiribati',
+  'Korea, North',
+  'Korea, South',
+  'Kuwait',
+  'Kyrgyzstan',
+  'Laos',
+  'Latvia',
+  'Lebanon',
+  'Lesotho',
+  'Liberia',
+  'Libya',
+  'Liechtenstein',
+  'Lithuania',
+  'Luxembourg',
+  'Macedonia',
+  'Madagascar',
+  'Malawi',
+  'Malaysia',
+  'Maldives',
+  'Mali',
+  'Malta',
+  'Marshall Islands',
+  'Mauritania',
+  'Mauritius',
+  'Mexico',
+  'Micronesia',
+  'Moldova',
+  'Monaco',
+  'Mongolia',
+  'Morocco',
+  'Mozambique',
+  'Myanmar',
+  'Namibia',
+  'Nauru',
+  'Nepal',
+  'Netherlands',
+  'New Zealand',
+  'Nicaragua',
+  'Niger',
+  'Nigeria',
+  'Norway',
+  'Oman',
+  'Pakistan',
+  'Palau',
+  'Panama',
+  'Papua New Guinea',
+  'Paraguay',
+  'Peru',
+  'Philippines',
+  'Poland',
+  'Portugal',
+  'Qatar',
+  'Romania',
+  'Russia',
+  'Rwanda',
+  'Saint Kitts and Nevis',
+  'Saint Lucia',
+  'Saint Vincent',
+  'Samoa',
+  'San Marino',
+  'Sao Tome and Principe',
+  'Saudi Arabia',
+  'Senegal',
+  'Serbia and Montenegro',
+  'Seychelles',
+  'Sierra Leone',
+  'Singapore',
+  'Slovakia',
+  'Slovenia',
+  'Solomon Islands',
+  'Somalia',
+  'South Africa',
+  'Spain',
+  'Sri Lanka',
+  'Sudan',
+  'Suriname',
+  'Swaziland',
+  'Sweden',
+  'Switzerland',
+  'Syria',
+  'Taiwan',
+  'Tajikistan',
+  'Tanzania',
+  'Thailand',
+  'Togo',
+  'Tonga',
+  'Trinidad and Tobago',
+  'Tunisia',
+  'Turkey',
+  'Turkmenistan',
+  'Tuvalu',
+  'Uganda',
+  'Ukraine',
+  'United Arab Emirates',
+  'United Kingdom',
+  'United States',
+  'Uruguay',
+  'Uzbekistan',
+  'Vanuatu',
+  'Vatican City',
+  'Venezuela',
+  'Vietnam',
+  'Yemen',
+  'Zambia',
+  'Zimbabwe',
+]
+
+mid_index = int((len(countries)-1)/2)
+print(f'mid indice is {mid_index}')
+mid_country = countries[mid_index]
+print(f'the mid country is {mid_country}')
+
+# 2 dividing list of countries into 2 lists
+country_list1=countries[0:96]
+country_list2 = countries[96:]
+print(f'country list 1 is \n {country_list1} \n country list 2 is\n {country_list2}')
+
+# 3 unppacking
+packed_list = ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
+ch,ru,U,*scandic= packed_list
+print(f'the unpacked list is \n {ch}\n {ru}\n {U}\n {scandic}')
