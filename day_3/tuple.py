@@ -58,7 +58,7 @@ first_three = food_stuff_lt[0:3]
 last_three = food_stuff_lt[-3:]
 print(f'first three citems are {first_three}\n last three items are {last_three}')
 
-#6 dleting tuple completely
+#6 deleting tuple completely
 del food_stuff_tp
 
 #7 checking if item is present in tupple
