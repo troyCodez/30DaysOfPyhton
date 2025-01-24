@@ -2955,20 +2955,26 @@ language_lst=[]
 for data in country_data:
     for item in data["languages"]:
         language_lst.append(item)
-        
-   
+         
 #    converting to set to remove duplicates
 language_set= set(language_lst)
 total_spoken = len(language_set)
 print(f'total number of langugaes spoken is {total_spoken}')
 
-# Obtaining the top 10 most spoken languages
+# ==============================================
+# ii. Obtaining the top 10 most spoken languages
+# ==============================================
 lang_counted = (Counter(language_lst))
-lang_counted_dict=dict(lang_counted)
-print(type(lang_counted_dict))
-# print(lang_counted_dict.sorted())
+print(f'top 10 most spoken langugaes are\n {lang_counted.most_common(10)}')# print(lang_counted_dict.sorted())
 
-# for item in sorted(lang_counted_dict.values()):
-#     print(item)
 
+# ==============================================
 # finding the 10 most populated countried in the world
+# ==============================================
+# population_lst=[]
+# for data in country_data:
+#     for item in data["population"]:
+#         print(item)
+# #         population_lst.append(item)
+
+# print(f'populations list  is {population_lst}')
