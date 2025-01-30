@@ -2971,10 +2971,20 @@ print(f'top 10 most spoken langugaes are\n {lang_counted.most_common(10)}')# pri
 # ==============================================
 # finding the 10 most populated countried in the world
 # ==============================================
-# population_lst=[]
-# for data in country_data:
-#     for item in data["population"]:
-#         print(item)
-# #         population_lst.append(item)
+
+population_lst=[]
+population_data =[]
+for data in country_data:
+    population_lst.append(data["population"])
+
+    population_lst.sort(reverse=True)
+
+for num in population_lst:
+    for data in country_data:
+        if num == data['population']:
+            population_data.append(data['name'])
+
+print(f'top ten most populated countries are:{population_data[:10]}')
+# print(f"the population list is : {population_lst}")
 
 # print(f'populations list  is {population_lst}')
